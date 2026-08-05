@@ -1,6 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /pub-videos/
-Disallow: /pub-images/
 
 Sitemap: https://yaoweili22.github.io/sitemap.txt

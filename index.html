@@ -1,29 +1,377 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Loading...</title>
-  <!-- <script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Yaowei Li — fourth-year Ph.D. candidate at Peking University. Research in omni generation, interactive AI, and agentic AI.">
+  <meta name="theme-color" content="#f5f5ef">
+  <meta property="og:title" content="Yaowei Li">
+  <meta property="og:description" content="Fourth-year Ph.D. candidate at Peking University working on omni generation, interactive AI, and agentic AI.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yaoweili22.github.io/">
+  <meta property="og:image" content="https://yaoweili22.github.io/assets/yaowei-iguazu-4b68acf5.jpg">
+  <link rel="canonical" href="https://yaoweili22.github.io/">
+  <link rel="icon" href="assets/yaowei-iguazu-4b68acf5.jpg">
+  <link rel="stylesheet" href="assets/site.css">
+  <script>
     (function () {
-      if (location.href.includes('#/project/uni-isp')) {
-        history.replaceState(null, null, '/project/uni-isp');
-      }
-      let redirect = sessionStorage.redirect;
-      delete sessionStorage.redirect;
-      if (redirect && redirect !== location.href) {
-        history.replaceState(null, null, redirect);
-      }
+      try {
+        var saved = localStorage.getItem('theme');
+        var theme = saved || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.dataset.theme = theme;
+      } catch (error) {}
     })();
-  </script> -->
-  <script type="module" crossorigin src="/assets/index-211468d5.js"></script>
-  <link rel="stylesheet" href="/assets/index-cd362757.css">
+  </script>
+  <script src="assets/site.js" defer></script>
+  <title>Yaowei Li</title>
 </head>
-
 <body>
-  <div id="app"></div>
-  
-</body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="#about" aria-label="Back to top">Yaowei Li</a>
+      <nav class="navlinks" aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#news">News</a>
+        <a href="#publications">Publications</a>
+        <a href="#honors">Honors</a>
+        <a href="#experience">Experience</a>
+        <a href="#services">Services</a>
+        <a class="nav-external" href="https://scholar.google.com/citations?user=XlhADHoAAAAJ&amp;hl=en" target="_blank" rel="noreferrer">Scholar ↗</a>
+        <button class="theme-button" type="button" aria-label="Switch to dark theme" title="Toggle color theme">
+          <svg class="icon icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+          <svg class="icon icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap" id="main">
+    <section class="hero" id="about" aria-labelledby="page-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Hello, I am</p>
+        <h1 id="page-title">Yaowei Li</h1>
+        <p class="role">Ph.D. Candidate · Peking University</p>
+        <p class="interests">omni generation · interactive AI · agentic AI</p>
+        <p class="bio">
+          I am a fourth-year Ph.D. candidate in the ADSP Lab at
+          <a href="https://english.pku.edu.cn/" target="_blank" rel="noreferrer">Peking University</a>,
+          advised by Prof. <a href="https://www.ece.pku.edu.cn/info/1012/1098.htm" target="_blank" rel="noreferrer">Yuexian Zou</a>.
+          My current research focuses on Omni Generation, Interactive AI, and Agentic AI. Previously, I worked extensively on Multimodal Generation and Real-time AR Generation.
+          <span class="availability-note">I expect to graduate in 2027. Please feel free to contact me if you have any opportunities!</span>
+        </p>
+        <nav class="profile-links" aria-label="Profile links">
+          <a href="mailto:liyaowei01@gmail.com">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+            Email
+          </a>
+          <a href="https://scholar.google.com/citations?user=XlhADHoAAAAJ&amp;hl=en" target="_blank" rel="noreferrer">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 9 12 4.5 2 9l10 4.5L22 9Z"/><path d="M6 11v5c0 1.1 2.7 2.6 6 2.6s6-1.5 6-2.6v-5"/></svg>
+            Scholar
+          </a>
+          <a href="https://github.com/liyaowei-stu" target="_blank" rel="noreferrer">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4 1.3-4-2.3-5.6-2.7M15 21v-3.3c0-.9-.3-1.6-.8-2 2.7-.3 5.4-1.3 5.4-5.9 0-1.3-.5-2.4-1.2-3.2.1-.3.5-1.5-.1-3.1 0 0-1-.3-3.3 1.2a11 11 0 0 0-5.6 0C6.5 1.5 5.5 1.8 5.5 1.8c-.6 1.6-.2 2.8-.1 3.1-.7.8-1.2 1.9-1.2 3.2 0 4.6 2.7 5.6 5.4 5.9-.4.4-.7.9-.8 1.7"/></svg>
+            GitHub
+          </a>
+        </nav>
+      </div>
+      <figure class="portrait-wrap">
+        <img class="portrait" src="assets/yaowei-iguazu-4b68acf5.jpg" alt="Portrait of Yaowei Li at Iguazú Falls" width="480" height="480">
+        <figcaption>Shenzhen, China</figcaption>
+      </figure>
+    </section>
+
+    <section id="news" aria-labelledby="news-title">
+      <div class="section-heading">
+        <div>
+          <p class="section-index">Latest updates</p>
+          <h2 id="news-title">News</h2>
+        </div>
+        <p class="heading-note news-scroll-hint">Scroll for earlier updates ↓</p>
+      </div>
+      <div class="news-panel" tabindex="0" role="region" aria-label="News timeline; scroll for earlier updates">
+        <ol class="news-list">
+          <li><time datetime="2026-06"><a href="https://github.com/jd-opensource/JoyAI-Echo" target="_blank" rel="noreferrer" aria-label="2026.06 — source: official JoyAI-Echo repository">2026.06</a></time><p>Released <a href="https://echo-team-joy-future-academy-jd.github.io/Echo-LongVideo-Page/" target="_blank" rel="noreferrer">JoyAI-Echo</a> and opened its official code repository.</p></li>
+          <li><time datetime="2026-05"><a href="https://doi.org/10.1109/TPAMI.2026.3695011" target="_blank" rel="noreferrer" aria-label="2026.05 — source: official IEEE DOI record">2026.05</a></time><p><a href="https://liyaowei-stu.github.io/project/BrushEdit/" target="_blank" rel="noreferrer">BrushEdit</a> was published in IEEE TPAMI.</p></li>
+          <li><time datetime="2026-03"><a href="https://s2026.siggraph.org/program/technical-papers/#TPTimeline" target="_blank" rel="noreferrer" aria-label="2026.03 — source: SIGGRAPH 2026 official timeline">2026.03</a></time><p><a href="https://dl.acm.org/doi/10.1145/3799902.3811059" target="_blank" rel="noreferrer">ViewWeaver</a> was accepted to SIGGRAPH 2026 as an Oral presentation.</p></li>
+          <li><time datetime="2026-01"><a href="https://iclr.cc/Conferences/2026/Dates" target="_blank" rel="noreferrer" aria-label="2026.01 — source: ICLR 2026 official dates">2026.01</a></time><p><a href="https://liyaowei-stu.github.io/project/IC_Custom/" target="_blank" rel="noreferrer">IC-Custom</a> and <a href="https://hkust-longgroup.github.io/GIR-Bench/" target="_blank" rel="noreferrer">GIR-Bench</a> were accepted to ICLR 2026.</p></li>
+          <li><time datetime="2025-08"><a href="https://asia.siggraph.org/2025/submissions/technical-papers/" target="_blank" rel="noreferrer" aria-label="2025.08 — source: SIGGRAPH Asia 2025 official timeline">2025.08</a></time><p><a href="https://liyaowei-stu.github.io/project/BlobCtrl/" target="_blank" rel="noreferrer">BlobCtrl</a> was accepted to SIGGRAPH Asia 2025 as an Oral presentation.</p></li>
+          <li><time datetime="2025-04"><a href="https://doi.org/10.1609/aaai.v39i5.32533" target="_blank" rel="noreferrer" aria-label="2025.04 — source: official AAAI proceedings record">2025.04</a></time><p><a href="https://liyaowei-stu.github.io/project/ImageConductor/" target="_blank" rel="noreferrer">Image Conductor</a> was published in the AAAI 2025 proceedings.</p></li>
+          <li><time datetime="2025-02"><a href="https://cvpr.thecvf.com/Conferences/2025/Dates" target="_blank" rel="noreferrer" aria-label="2025.02 — source: CVPR 2025 official dates">2025.02</a></time><p><a href="https://lg-li.github.io/project/nvcomposer" target="_blank" rel="noreferrer">NVComposer</a> was accepted to CVPR 2025.</p></li>
+          <li><time datetime="2025-01"><a href="https://iclr.cc/Conferences/2025/Dates" target="_blank" rel="noreferrer" aria-label="2025.01 — source: ICLR 2025 official dates">2025.01</a></time><p><a href="https://lihxxx.github.io/DisPose/" target="_blank" rel="noreferrer">DisPose</a> was accepted to ICLR 2025.</p></li>
+          <li><time datetime="2024-03"><a href="https://s2024.siggraph.org/program/technical-papers/#timeline" target="_blank" rel="noreferrer" aria-label="2024.03 — source: SIGGRAPH 2024 official timeline">2024.03</a></time><p><a href="https://wzhouxiff.github.io/projects/MotionCtrl/" target="_blank" rel="noreferrer">MotionCtrl</a> was accepted to SIGGRAPH 2024.</p></li>
+          <li><time datetime="2023-10"><a href="https://doi.org/10.1109/ICCV51070.2023.00268" target="_blank" rel="noreferrer" aria-label="2023.10 — source: official IEEE ICCV proceedings record">2023.10</a></time><p><a href="https://arxiv.org/abs/2303.15932" target="_blank" rel="noreferrer">Unify, Align and Refine</a> appeared in the official ICCV 2023 proceedings.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="publications" aria-labelledby="publications-title">
+      <div class="section-heading">
+        <div>
+          <p class="section-index">01 / Research</p>
+          <h2 id="publications-title">Selected publications</h2>
+        </div>
+        <p class="heading-note">* equal contribution</p>
+      </div>
+
+      <div class="publication-list">
+        <article class="publication">
+          <a class="publication-media" href="https://echo-team-joy-future-academy-jd.github.io/Echo-LongVideo-Page/" target="_blank" rel="noreferrer" aria-label="Visit the JoyAI-Echo project page">
+            <img src="pub-images/thumbs/joyai-echo-cover.jpg" alt="JoyAI-Echo long audio-visual generation preview" loading="lazy">
+          </a>
+          <div class="publication-body">
+            <div class="publication-meta"><span>Technical Report 2026</span></div>
+            <h3><a href="https://echo-team-joy-future-academy-jd.github.io/Echo-LongVideo-Page/" target="_blank" rel="noreferrer">JoyAI-Echo: Pushing the Frontier of Long Audio-Visual Generation</a></h3>
+            <p class="authors">Haoran Li, Fredreic Li, ..., <strong>Yaowei Li</strong>, ..., Zeyue Xue, Nan Duan</p>
+            <div class="paper-links">
+              <a href="https://www.researchgate.net/publication/405770309_JoyAI-Echo_Pushing_the_Frontier_of_Long_Audio-Visual_Generation" target="_blank" rel="noreferrer">Report ↗</a>
+              <a href="https://echo-team-joy-future-academy-jd.github.io/Echo-LongVideo-Page/" target="_blank" rel="noreferrer">Project ↗</a>
+              <a href="https://github.com/jd-opensource/JoyAI-Echo" target="_blank" rel="noreferrer">Code ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="publication">
+          <a class="publication-media" href="https://dl.acm.org/doi/10.1145/3799902.3811059" target="_blank" rel="noreferrer" aria-label="Read the ViewWeaver paper">
+            <img src="pub-images/thumbs/viewweaver-cover.jpg" alt="ViewWeaver multi-view image customization preview" loading="lazy">
+          </a>
+          <div class="publication-body">
+            <div class="publication-meta"><span>SIGGRAPH 2026</span><span class="status">Oral</span></div>
+            <h3><a href="https://dl.acm.org/doi/10.1145/3799902.3811059" target="_blank" rel="noreferrer">ViewWeaver: Geometry-Grounded Generative Rendering for 3D-Aware Image Customization</a></h3>
+            <p class="authors"><strong>Yaowei Li</strong>, Xiaoyu Li, Zhaoyang Zhang, Hongxiang Li, Long Chen, Ying Shan, Yuexian Zou</p>
+            <div class="paper-links">
+              <a href="https://dl.acm.org/doi/10.1145/3799902.3811059" target="_blank" rel="noreferrer">Paper ↗</a>
+              <span>Project — TBD</span>
+              <span>Code — TBD</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="publication">
+          <a class="publication-media" href="https://hkust-longgroup.github.io/GIR-Bench/" target="_blank" rel="noreferrer" aria-label="Visit the GIR-Bench project page">
+            <img src="pub-images/thumbs/gir-bench-cover.jpg" alt="GIR-Bench reasoning image generation benchmark preview" loading="lazy">
+          </a>
+          <div class="publication-body">
+            <div class="publication-meta"><span>ICLR 2026</span></div>
+            <h3><a href="https://hkust-longgroup.github.io/GIR-Bench/" target="_blank" rel="noreferrer">GIR-Bench: Versatile Benchmark for Generating Images with Reasoning</a></h3>
+            <p class="authors">Hongxiang Li*, <strong>Yaowei Li*</strong>, Bin Lin, Yuwei Niu, Yuhang Yang, Xiaoshuang Huang, Jiayin Cai, Xiaolong Jiang, Yao Hu, Long Chen</p>
+            <div class="paper-links">
+              <a href="https://arxiv.org/abs/2510.11026" target="_blank" rel="noreferrer">Paper ↗</a>
+              <a href="https://hkust-longgroup.github.io/GIR-Bench/" target="_blank" rel="noreferrer">Project ↗</a>
+              <a href="https://github.com/HKUST-LongGroup/GIR-Bench" target="_blank" rel="noreferrer">Code ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="publication">
+          <a class="publication-media" href="https://liyaowei-stu.github.io/project/IC_Custom/" target="_blank" rel="noreferrer" aria-label="Visit the IC-Custom project page">
+            <img src="pub-images/thumbs/li2025iccustom-cover.jpg" alt="IC-Custom project preview" loading="lazy">
+          </a>
+          <div class="publication-body">
+            <div class="publication-meta"><span>ICLR 2026</span></div>
+            <h3><a href="https://liyaowei-stu.github.io/project/IC_Custom/" target="_blank" rel="noreferrer">IC-Custom: Diverse Image Customization via In-Context Learning</a></h3>
+            <p class="authors"><strong>Yaowei Li</strong>, Xiaoyu Li, Zhaoyang Zhang, Yuxuan Bian, …, Yuexian Zou, Ying Shan</p>
+            <div class="paper-links">
+              <a href="https://arxiv.org/abs/2507.01926" target="_blank" rel="noreferrer">Paper ↗</a>
+              <a href="https://liyaowei-stu.github.io/project/IC_Custom/" target="_blank" rel="noreferrer">Project ↗</a>
+              <a href="https://github.com/TencentARC/IC-Custom" target="_blank" rel="noreferrer">Code ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="publication">
+          <a class="publication-media" href="https://liyaowei-stu.github.io/project/BlobCtrl/" target="_blank" rel="noreferrer" aria-label="Visit the BlobCtrl project page">
+            <img src="pub-images/thumbs/li2025blobctrl-cover.jpg" alt="BlobCtrl project preview" loading="lazy">
+          </a>
+          <div class="publication-body">
+            <div class="publication-meta"><span>SIGGRAPH Asia 2025</span><span class="status">Oral</span></div>
+            <h3><a href="https://liyaowei-stu.github.io/project/BlobCtrl/" target="_blank" rel="noreferrer">BlobCtrl: Taming Controllable Blob for Element-level Image Editing</a></h3>
+            <p class="authors"><strong>Yaowei Li</strong>, Lingen Li, Zhaoyang Zhang, Xiaoyu Li, Guangzhi Wang, Hongxiang Li, Xiaodong Cun, Ying Shan, Yuexian Zou</p>
+            <div class="paper-links">
+              <a href="https://arxiv.org/abs/2503.13434" target="_blank" rel="noreferrer">Paper ↗</a>
+              <a href="https://liyaowei-stu.github.io/project/BlobCtrl/" target="_blank" rel="noreferrer">Project ↗</a>
+              <a href="https://github.com/TencentARC/BlobCtrl" target="_blank" rel="noreferrer">Code ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="publication">
+          <a class="publication-media" href="https://liyaowei-stu.github.io/project/BrushEdit/" target="_blank" rel="noreferrer" aria-label="Visit the BrushEdit project page">
+            <img src="pub-images/thumbs/li2024brushedit-cover.jpg" alt="BrushEdit project preview" loading="lazy">
+          </a>
+          <div class="publication-body">
+            <div class="publication-meta"><span>IEEE TPAMI 2026</span></div>
+            <h3><a href="https://liyaowei-stu.github.io/project/BrushEdit/" target="_blank" rel="noreferrer">BrushEdit: All-In-One Image Inpainting and Editing</a></h3>
+            <p class="authors"><strong>Yaowei Li*</strong>, Yuxuan Bian*, Xuan Ju*, Zhaoyang Zhang, Junhao Zhuang, Ying Shan, Yuexian Zou, Qiang Xu</p>
+            <div class="paper-links">
+              <a href="https://arxiv.org/abs/2412.10316" target="_blank" rel="noreferrer">Paper ↗</a>
+              <a href="https://liyaowei-stu.github.io/project/BrushEdit/" target="_blank" rel="noreferrer">Project ↗</a>
+              <a href="https://github.com/TencentARC/BrushEdit" target="_blank" rel="noreferrer">Code ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="publication">
+          <a class="publication-media" href="https://lg-li.github.io/project/nvcomposer" target="_blank" rel="noreferrer" aria-label="Visit the NVComposer project page">
+            <img src="pub-images/thumbs/li2024nvcomposer-cover.jpg" alt="NVComposer project preview" loading="lazy">
+          </a>
+          <div class="publication-body">
+            <div class="publication-meta"><span>CVPR 2025</span></div>
+            <h3><a href="https://lg-li.github.io/project/nvcomposer" target="_blank" rel="noreferrer">NVComposer: Boosting Generative Novel View Synthesis with Multiple Sparse and Unposed Images</a></h3>
+            <p class="authors">Lingen Li, Zhaoyang Zhang, <strong>Yaowei Li</strong>, Jiale Xu, Xiaoyu Li, Wenbo Hu, Weihao Cheng, Jinwei Gu, Tianfan Xue, Ying Shan</p>
+            <div class="paper-links">
+              <a href="https://arxiv.org/abs/2412.03517" target="_blank" rel="noreferrer">Paper ↗</a>
+              <a href="https://lg-li.github.io/project/nvcomposer" target="_blank" rel="noreferrer">Project ↗</a>
+              <a href="https://github.com/TencentARC/NVComposer" target="_blank" rel="noreferrer">Code ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="publication">
+          <a class="publication-media" href="https://lihxxx.github.io/DisPose/" target="_blank" rel="noreferrer" aria-label="Visit the DisPose project page">
+            <img src="pub-images/thumbs/li2024dispose-cover.jpg" alt="DisPose project preview" loading="lazy">
+          </a>
+          <div class="publication-body">
+            <div class="publication-meta"><span>ICLR 2025</span></div>
+            <h3><a href="https://lihxxx.github.io/DisPose/" target="_blank" rel="noreferrer">DisPose: Disentangling Pose Guidance for Controllable Human Image Animation</a></h3>
+            <p class="authors">Hongxiang Li, <strong>Yaowei Li</strong>, Yuhang Yang, Junjie Cao, Zhihong Zhu, Xuxin Cheng, Long Chen</p>
+            <div class="paper-links">
+              <a href="https://arxiv.org/abs/2412.09349" target="_blank" rel="noreferrer">Paper ↗</a>
+              <a href="https://lihxxx.github.io/DisPose/" target="_blank" rel="noreferrer">Project ↗</a>
+              <a href="https://github.com/lihxxx/DisPose" target="_blank" rel="noreferrer">Code ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="publication">
+          <a class="publication-media" href="https://liyaowei-stu.github.io/project/ImageConductor/" target="_blank" rel="noreferrer" aria-label="Visit the Image Conductor project page">
+            <img src="pub-images/thumbs/li2024imageconductor-cover.jpg" alt="Image Conductor project preview" loading="lazy">
+          </a>
+          <div class="publication-body">
+            <div class="publication-meta"><span>AAAI 2025</span></div>
+            <h3><a href="https://liyaowei-stu.github.io/project/ImageConductor/" target="_blank" rel="noreferrer">Image Conductor: Precision Control for Interactive Video Synthesis</a></h3>
+            <p class="authors"><strong>Yaowei Li</strong>, Xintao Wang, Zhaoyang Zhang, Zhouxia Wang, Ziyang Yuan, Liangbin Xie, Yuexian Zou, Ying Shan</p>
+            <div class="paper-links">
+              <a href="https://arxiv.org/abs/2406.15339" target="_blank" rel="noreferrer">Paper ↗</a>
+              <a href="https://liyaowei-stu.github.io/project/ImageConductor/" target="_blank" rel="noreferrer">Project ↗</a>
+              <a href="https://github.com/liyaowei-stu/ImageConductor" target="_blank" rel="noreferrer">Code ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="publication">
+          <a class="publication-media" href="https://wzhouxiff.github.io/projects/MotionCtrl/" target="_blank" rel="noreferrer" aria-label="Visit the MotionCtrl project page">
+            <img src="pub-images/thumbs/li2024motionctrl-cover.jpg" alt="MotionCtrl project preview" loading="lazy">
+          </a>
+          <div class="publication-body">
+            <div class="publication-meta"><span>SIGGRAPH 2024</span></div>
+            <h3><a href="https://wzhouxiff.github.io/projects/MotionCtrl/" target="_blank" rel="noreferrer">MotionCtrl: A Unified and Flexible Motion Controller for Video Generation</a></h3>
+            <p class="authors">Zhouxia Wang, Ziyang Yuan, Xintao Wang, <strong>Yaowei Li</strong>, Tianshui Chen, Menghan Xia, Ping Luo, Ying Shan</p>
+            <div class="paper-links">
+              <a href="https://arxiv.org/abs/2312.03641" target="_blank" rel="noreferrer">Paper ↗</a>
+              <a href="https://wzhouxiff.github.io/projects/MotionCtrl/" target="_blank" rel="noreferrer">Project ↗</a>
+              <a href="https://github.com/TencentARC/MotionCtrl" target="_blank" rel="noreferrer">Code ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="publication">
+          <a class="publication-media" href="https://arxiv.org/abs/2303.15932" target="_blank" rel="noreferrer" aria-label="Read Unify, Align and Refine">
+            <img src="pub-images/thumbs/li2025unifyalignrefine-cover.jpg" alt="Unify, Align and Refine project preview" loading="lazy">
+          </a>
+          <div class="publication-body">
+            <div class="publication-meta"><span>ICCV 2023</span></div>
+            <h3><a href="https://arxiv.org/abs/2303.15932" target="_blank" rel="noreferrer">Unify, Align and Refine: Multi-Level Semantic Alignment for Radiology Report Generation</a></h3>
+            <p class="authors"><strong>Yaowei Li</strong>, Bang Yang, Xuxin Cheng, Zhihong Zhu, Hongxiang Li, Yuexian Zou</p>
+            <div class="paper-links">
+              <a href="https://arxiv.org/abs/2303.15932" target="_blank" rel="noreferrer">Paper ↗</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="honors" aria-labelledby="honors-title">
+      <div class="section-heading">
+        <div>
+          <p class="section-index">02 / Awards</p>
+          <h2 id="honors-title">Selected honors &amp; awards</h2>
+        </div>
+      </div>
+      <ol class="fact-list honors-list">
+        <li><span class="fact-year">2025</span><span><strong>NeurIPS Top Reviewer</strong><small>NeurIPS 2025</small></span></li>
+        <li><span class="fact-year">2023</span><span><strong>Outstanding Student Model</strong><small>Peking University, China</small></span></li>
+        <li><span class="fact-year">2021</span><span><strong>National Scholarship</strong><small>Top 0.2% nationwide</small></span></li>
+        <li><span class="fact-year">2020</span><span><strong>Finalist, Interdisciplinary Contest in Modeling</strong><small>United States</small></span></li>
+      </ol>
+    </section>
+
+    <section id="experience" aria-labelledby="experience-title">
+      <div class="section-heading">
+        <div>
+          <p class="section-index">03 / Experience</p>
+          <h2 id="experience-title">Research experience</h2>
+        </div>
+      </div>
+      <div class="experience-stack">
+        <article class="experience-card">
+          <div class="experience-intro">
+            <p class="experience-date">Mar 2026 — Present</p>
+            <h3><a href="https://research.joyai.com/" target="_blank" rel="noreferrer">Joy Future Academy ↗</a></h3>
+            <p>Research Intern · TGT Program · Shenzhen</p>
+            <p class="experience-topic">Long-horizon streaming audio-video generation</p>
+          </div>
+          <ol class="timeline">
+            <li><span>Mentors</span><p><a href="https://xuezeyue.github.io/" target="_blank" rel="noreferrer">Zeyue Xue</a> and <a href="https://nanduan.github.io/" target="_blank" rel="noreferrer">Nan Duan</a></p></li>
+            <li><span>Research</span><p>Long-horizon, real-time streaming audio-video generation and world models.</p></li>
+          </ol>
+        </article>
+
+        <article class="experience-card">
+          <div class="experience-intro">
+            <p class="experience-date">Sep 2023 — Mar 2026</p>
+            <h3><a href="https://arc.tencent.com/en/index" target="_blank" rel="noreferrer">Tencent ARC Laboratory ↗</a></h3>
+            <p>Research Intern · Shenzhen</p>
+            <p class="experience-topic">Image customization, image editing, controllable video generation</p>
+          </div>
+          <ol class="timeline">
+            <li><span>May 2025 — Mar 2026</span><p>Tencent Project UP · Supervised by <a href="https://scholar.google.com/citations?user=Dt0PcAYAAAAJ&amp;hl=en" target="_blank" rel="noreferrer">Xiaoyu Li</a> and <a href="https://scholar.google.com/citations?user=4oXBp9UAAAAJ" target="_blank" rel="noreferrer">Ying Shan</a>.</p></li>
+            <li><span>May 2024 — May 2025</span><p>Supervised by <a href="https://scholar.google.com/citations?user=Pf6o7uAAAAAJ&amp;hl=en" target="_blank" rel="noreferrer">Zhaoyang Zhang</a> and <a href="https://scholar.google.com/citations?user=4oXBp9UAAAAJ" target="_blank" rel="noreferrer">Ying Shan</a>.</p></li>
+            <li><span>Sep 2023 — May 2024</span><p>Supervised by <a href="https://scholar.google.com/citations?user=FQgZpQoAAAAJ&amp;hl=en" target="_blank" rel="noreferrer">Xintao Wang</a> and <a href="https://scholar.google.com/citations?user=4oXBp9UAAAAJ" target="_blank" rel="noreferrer">Ying Shan</a>.</p></li>
+          </ol>
+        </article>
+      </div>
+    </section>
+
+    <section id="services" aria-labelledby="services-title">
+      <div class="section-heading">
+        <div>
+          <p class="section-index">04 / Academic Service</p>
+          <h2 id="services-title">Services</h2>
+        </div>
+      </div>
+      <div class="service-grid">
+        <article>
+          <span class="service-number">01</span>
+          <h3>Conference reviewer</h3>
+          <p>ICLR 2026 · CVPR 2026 · SIGGRAPH 2026 · NeurIPS 2025 · ACM MM 2025 · ICCV 2025 · ICML 2025 · CVPR 2025 · ICLR 2025 · AAAI 2025 · ECCV 2024</p>
+        </article>
+        <article>
+          <span class="service-number">02</span>
+          <h3>Journal reviewer</h3>
+          <p>IEEE Transactions on Circuits and Systems for Video Technology (TCSVT)</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <p>© <span id="year">2026</span> Yaowei Li</p>
+      <p class="footer-credit">Design inspired by <a href="https://heheyas.github.io/" target="_blank" rel="noreferrer">Heyas</a>.</p>
+      <a href="#about">Back to top ↑</a>
+    </div>
+  </footer>
+</body>
 </html>
